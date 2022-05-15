@@ -1,6 +1,7 @@
 // MovieItem.jsx
 
 import { useDispatch, useSelector } from 'react-redux';
+import { useHistory } from 'react-router-dom';
 
 
 
@@ -8,12 +9,14 @@ import { useDispatch, useSelector } from 'react-redux';
 
 function MovieItem({movie}) {
 
+  const history = useHistory();
   const dispatch = useDispatch();
   const handleClick = () => {
     dispatch({ 
       type: 'FETCH_MOVIE',
       payload: movie.id
   });
+  history.push('/details');
   }
 
   return (
