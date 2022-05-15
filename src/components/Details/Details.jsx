@@ -30,6 +30,14 @@ function Details() {
           </div>
         )
       })}
+      {/* {genre && genre.map((genre) => {
+        return (
+          <div key={genre.id}>
+            <img src={genre.poster} key={genre.id} />
+            <p>Genre(s): {genre}</p>
+          </div>
+        )
+      })} */}
 
     </>
   )
